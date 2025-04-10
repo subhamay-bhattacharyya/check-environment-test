@@ -13,4 +13,4 @@ jobs:
       aws-region: "us-east-1"
       cfn-template-file: root-stack-template.yaml
       cfn-params-file: ./cfn/params/cfn-parameters.json
-      snyk-token: ${{ secrets.SNYK_TOKEN }}
+      # snyk-token: 
