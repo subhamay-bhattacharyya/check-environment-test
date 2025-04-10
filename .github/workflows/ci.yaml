@@ -4,16 +4,13 @@ run-name: Build run by ${{ github.actor }} on ${{ github.ref_name }}
 on:
   workflow_dispatch:
 
-env:
-  AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
-  AWS_REGION: ${{ vars.AWS_REGION }}
 
 jobs:
   ci-build:
     uses: subhamay-bhattacharyya-gha/cfn-ci-reusable-wf/.github/workflows/ci.yaml@feature/SB-0001-initial-release
     with:
-      aws-role-arn: ${{ env.AWS_ROLE_ARN }}
-      aws-region: ${{ env.AWS_REGION }}
+      aws-role-arn: "arn:aws:iam::637423502513:role/subhamay-github-oidc-role"
+      aws-region: "us-east-1"
       cfn-template-file: root-stack-template.yaml
       cfn-params-file: ./cfn/params/cfn-parameters.json
       snyk-token: ${{ secrets.SNYK_TOKEN }}
