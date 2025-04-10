@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Check Environments
         id: check
-        uses: subhamay-bhattacharyya-gha/check-environments-action/action.yaml@feature/SB-0001-initial-release
+        uses: subhamay-bhattacharyya-gha/check-environments-action@feature/SB-0001-initial-release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
