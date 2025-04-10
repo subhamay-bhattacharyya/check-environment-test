@@ -22,8 +22,8 @@ jobs:
     name: CI
     uses: subhamay-bhattacharyya-gha/cfn-ci-reusable-wf/.github/workflows/ci.yaml@feature/SB-0001-initial-release
     with:
-      aws-role-arn: "arn:aws:iam::637423502513:role/subhamay-github-oidc-role"
-      aws-region: "us-east-1"
+      # aws-role-arn: "arn:aws:iam::637423502513:role/subhamay-github-oidc-role"
+      # aws-region: "us-east-1"
       cfn-template-file: root-stack-template.yaml
       cfn-params-file: ./cfn/params/cfn-parameters.json
       environment: ${{ inputs.environment }}
