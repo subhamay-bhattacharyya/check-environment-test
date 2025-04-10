@@ -5,6 +5,7 @@ on:
 
 jobs:
   check-envs:
+    name: "Check Environments"
     runs-on: ubuntu-latest
     steps:
       - name: Check Environments
