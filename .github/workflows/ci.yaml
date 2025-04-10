@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    name: CI
     uses: subhamay-bhattacharyya-gha/cfn-ci-reusable-wf/.github/workflows/ci.yaml@feature/SB-0001-initial-release
     with:
       aws-role-arn: "arn:aws:iam::637423502513:role/subhamay-github-oidc-role"
