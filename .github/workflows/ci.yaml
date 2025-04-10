@@ -11,7 +11,7 @@ on:
 
 jobs:
   ci-build:
-    uses: subhamay-bhattacharyya-gha/cfn-ci-reusable-wf/.github/workflows/ci.yaml@main
+    uses: subhamay-bhattacharyya-gha/cfn-ci-reusable-wf/.github/workflows/ci.yaml@feature/SB-0001-initial-release
     with:
       aws-role-arn: ${{ env.AWS_ROLE_ARN }}
       aws-region: ${{ env.AWS_REGION }}
