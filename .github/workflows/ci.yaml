@@ -4,9 +4,9 @@ run-name: Build run by ${{ github.actor }} on ${{ github.ref_name }}
 on:
   workflow_dispatch:
 
-# env:
-#   AWS_ROLE_ARN: ${{ vars.AWS_ROLE_ARN }}
-#   AWS_REGION: ${{ vars.AWS_REGION }}
+env:
+  AWS_ROLE_ARN: ${{ vars.AWS_ROLE_ARN }}
+  AWS_REGION: ${{ vars.AWS_REGION }}
 
 
 jobs:
