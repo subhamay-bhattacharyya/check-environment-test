@@ -3,6 +3,18 @@ run-name: Build run by ${{ github.actor }} on ${{ github.ref_name }}
 
 on:
   workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      environment:
+        description: "Deployment Environment"
+        required: true
+        default: "ci"
+        type: choice
+        options:
+          - ci
+          - devl
+          - test
+          - prod
 
 
 jobs:
@@ -14,4 +26,5 @@ jobs:
       aws-region: "us-east-1"
       cfn-template-file: root-stack-template.yaml
       cfn-params-file: ./cfn/params/cfn-parameters.json
+      environment: ${{ inputs.environment }}
       # snyk-token: 
